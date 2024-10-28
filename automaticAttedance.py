@@ -11,13 +11,13 @@ import time
 import tkinter.ttk as tkk
 import tkinter.font as font
 
-haarcasecade_path = "haarcascade_frontalface_default.xml"
+haarcasecade_path = r"haarcascade_frontalface_default.xml"
 trainimagelabel_path = (
-    "TrainingImageLabel\\Trainner.yml"
+    r"TrainingImageLabel\Trainner.yml"
 )
-trainimage_path = "TrainingImage"
+trainimage_path = r"TrainingImage"
 studentdetail_path = (
-    "StudentDetails\\studentdetails.csv"
+    r"StudentDetails\studentdetails.csv"
 )
 attendance_path = "Attendance"
 # for choose subject and fill attendance
@@ -192,9 +192,9 @@ def subjectChoose(text_to_speech):
     subject.geometry("580x320")
     subject.resizable(0, 0)
     subject.configure(background="black")
-    # subject_logo = Image.open("UI_Image/0004.png")
-    # subject_logo = subject_logo.resize((50, 47), Image.ANTIALIAS)
-    # subject_logo1 = ImageTk.PhotoImage(subject_logo)
+    subject_logo = Image.open("UI_Image/0004.png")
+    subject_logo = subject_logo.resize((50, 47), Image.Resampling.LANCZOS)
+    subject_logo1 = ImageTk.PhotoImage(subject_logo)
     titl = tk.Label(subject, bg="black", relief=RIDGE, bd=10, font=("arial", 30))
     titl.pack(fill=X)
     # l1 = tk.Label(subject, image=subject_logo1, bg="black",)

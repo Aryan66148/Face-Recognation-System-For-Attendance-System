@@ -72,7 +72,7 @@ header_frame = Frame(window, bg="#1e1e2d")
 header_frame.pack(pady=20, fill="x")
 
 logo = Image.open("UI_Image/0001.png")
-logo = logo.resize((50, 47), Image.LANCZOS)
+logo = logo.resize((50, 47), Image.Resampling.LANCZOS)
 logo1 = ImageTk.PhotoImage(logo)
 titl = tk.Label(header_frame, image=logo1, bg="#1e1e2d").pack(side="left", padx=20)
 l1 = tk.Label(window, image=logo1, bg="black",)
